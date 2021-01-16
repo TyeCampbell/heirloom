@@ -11,7 +11,6 @@ const StyledPostTags = styled.div`
   margin: 1rem 0 0;
   padding: 0 var(--space);
   position: relative;
-  z-index: 2;
 `;
 const StyledReadMoreLink = styled(Link)`
   color: var(--primary-color);
@@ -25,7 +24,6 @@ const StyledReadMoreLink = styled(Link)`
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 0;
 
   &:hover {
     color: var(--primary-color) !important;

@@ -11,11 +11,6 @@ import backgroundImg from '../images/backgroundVeggies.jpg';
 const StyledHeroSection = styled(StyledSectionHero)`
   min-height: calc(100vh + var(--header-height));
   position: relative;
-  background-image: url(${backgroundImg});
-  background-size: auto 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: -2;
 
   ${mq.gt.sm} {
    min-height: calc(100vh + 2.2 * var(--header-height));
@@ -71,12 +66,12 @@ const Hero = ({ data }) => {
   return (
     <StyledHeroSection>
         <StyledBodyWrapper>
-        <StyledIntroduction>{introduction}</StyledIntroduction>
-        <StyledAuthor>{author}</StyledAuthor>
-        <StyledTagline>{tagline}</StyledTagline>
-        <StyledDescription dangerouslySetInnerHTML={{ __html: description }} />
-        <ButtonLink label={ctaLabel} link={ctaLink} />
-        <ScrollIndicator />
+            <StyledIntroduction>{introduction}</StyledIntroduction>
+            <StyledAuthor>{author}</StyledAuthor>
+            <StyledTagline>{tagline}</StyledTagline>
+            <StyledDescription dangerouslySetInnerHTML={{ __html: description }} />
+            <ButtonLink label={ctaLabel} link={ctaLink} />
+            <ScrollIndicator />
         </StyledBodyWrapper>
     </StyledHeroSection>
   );

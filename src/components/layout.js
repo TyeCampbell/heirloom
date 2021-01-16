@@ -9,8 +9,19 @@ import Footer from './footer';
 import Header from './header';
 import NavigationBar from './nagivation-bar';
 import ScrollToTop from './scroll-to-top';
+import backgroundImg from '../images/backgroundVeggies.jpg';
+
 
 library.add(fab, fas);
+
+const heroBackgroundImage = {
+    backgroundImage: 'url(' + backgroundImg + ')',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundAttachment: 'fixed',
+    backgroundRepeat: 'no-repeat',
+    zIndex: -1
+};
 
 if (typeof window !== 'undefined') {
   require('smooth-scroll')('a[href*="#"]');
@@ -31,7 +42,7 @@ const Layout = ({ children, menuLinks }) => {
   return (
     <React.Fragment>
       <Header menuLinks={menuLinks} />
-      <main>{children}</main>
+      <main style={heroBackgroundImage}>{children}</main>
       <Footer author={author} />
       <NavigationBar menuLinks={menuLinks} />
       <ScrollToTop />

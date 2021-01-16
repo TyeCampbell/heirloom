@@ -34,7 +34,6 @@ const StyledPostContainer = styled.article`
 `;
 const StyledDateOverlay = styled.div`
   pointer-events: none;
-  z-index: 1;
   position: absolute;
   top: 0.5rem;
   left: 0.5rem;
